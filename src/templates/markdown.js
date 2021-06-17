@@ -4,13 +4,16 @@ import Img from 'gatsby-image';
 
 const Markdown = ({ data }) => {
   const { markdownRemark } = data;
+  const { featuredImage } = markdownRemark.frontmatter;
 
   return (
     <div>
       <h1>{markdownRemark.frontmatter.title}</h1>
-      <Img
-        fluid={markdownRemark.frontmatter.featuredImage.childImageSharp.fluid}
-      />
+      {featuredImage && (
+        <Img
+          fluid={markdownRemark.frontmatter.featuredImage.childImageSharp.fluid}
+        />
+      )}
       <p>{markdownRemark.frontmatter.description}</p>
       <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
     </div>
