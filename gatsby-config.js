@@ -1,25 +1,45 @@
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
+
   plugins: [
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "data",
+        name: 'data',
         path: `${__dirname}/src/data`,
       },
     },
 
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
+        name: 'images',
         path: `${__dirname}/src/images`,
+      },
+    },
+
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              withWebp: true,
+              tracedSVG: {
+                color: 'coral',
+              },
+            },
+          },
+        ],
       },
     },
 
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
-
-    "gatsby-transformer-remark",
   ],
 };
