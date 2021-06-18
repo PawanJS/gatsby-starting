@@ -1,23 +1,25 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
+
+import Layout from '../components/layout.component';
 
 const Markdown = ({ data }) => {
   const { markdownRemark } = data;
-  const { featuredImage } = markdownRemark.frontmatter;
+  // const { featuredImage } = markdownRemark.frontmatter;
 
   return (
-    <div>
+    <Layout>
       <h1>{markdownRemark.frontmatter.title}</h1>
-      {featuredImage && (
+      {/* {featuredImage && (
         <Img
           fluid={markdownRemark.frontmatter.featuredImage.childImageSharp.fluid}
           loading="eager"
         />
-      )}
-      <p>{markdownRemark.frontmatter.description}</p>
+      )} */}
+      <h2>{markdownRemark.frontmatter.description}</h2>
       <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-    </div>
+    </Layout>
   );
 };
 
@@ -29,13 +31,13 @@ export const pageQuery = graphql`
         description
         slug
         title
-        featuredImage {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+        # featuredImage {
+        #   childImageSharp {
+        #     fluid {
+        #       ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        #     }
+        #   }
+        # }
       }
     }
   }

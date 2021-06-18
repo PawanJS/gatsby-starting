@@ -2,15 +2,15 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-// import Food from "../images/food.jpg";
+import Layout from '../components/layout.component';
 
 const Index = ({ data }) => {
   const image = getImage(data.file.childImageSharp.gatsbyImageData);
   return (
-    <div>
+    <Layout>
       <h1>Home page</h1>
       <GatsbyImage image={image} alt="Food in the plate" />
-    </div>
+    </Layout>
   );
 };
 export const HomePageQuery = graphql`
