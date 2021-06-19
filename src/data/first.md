@@ -1,7 +1,6 @@
 ---
 title: Would you look at that?
 description: I saw you looked at it!
-slug: /first-markdown
 ---
 
 ![Image of food](../images/food.jpg)
