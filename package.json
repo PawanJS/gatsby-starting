@@ -11,8 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "gatsby": "^3.7.2",
     "gatsby-image": "^3.7.1",
+    "gatsby-plugin-emotion": "^6.7.1",
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-sass": "^4.7.1",
     "gatsby-plugin-sharp": "^3.7.1",
