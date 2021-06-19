@@ -29,9 +29,7 @@ module.exports = {
             options: {
               maxWidth: 1000,
               withWebp: true,
-              tracedSVG: {
-                color: 'coral',
-              },
+              loading: 'eager',
             },
           },
         ],
