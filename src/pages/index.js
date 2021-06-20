@@ -29,7 +29,7 @@ const Index = ({ data }) => {
         </PostCard>
       ))}
       <Link to="/all-posts/" className="link">
-        See More
+        See All Posts
       </Link>
     </Layout>
   );

@@ -4,7 +4,9 @@ description: I saw you looked at it!
 date: 2021-04-11
 ---
 
-Every developer has a unique setup that he or she likes to work with. The setup can be a physical desk setup or a software setup that he/she use in development.The setup is one thing that boosts the productivity of the developer and it really feels calming in working in your preferred development environment. I like my development setup very much. It includes a neat and minimal desk setup or minimal software setup for development. As of now, I am not a professional-grade software dev but I do lots of fronted web development. So let's discuss my software and extension setup and discuss in comments about yours I love to hear from you.
+Every developer has a unique setup that he or she likes to work with. The setup can be a physical desk setup or a software setup that he/she use in development.The setup is one thing that boosts the productivity of the developer and it really feels calming in working in your preferred development environment.
+
+I like my development setup very much. It includes a neat and minimal desk setup or minimal software setup for development. As of now, I am not a professional-grade software dev but I do lots of fronted web development. So let's discuss my software and extension setup and discuss in comments about yours I love to hear from you.
 
 OS:- Linux Deepin
 IDE:- VS Code
