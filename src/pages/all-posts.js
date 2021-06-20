@@ -1,11 +1,11 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import Layout from '../components/layout.component';
 import { PostCard } from '../components/post-card.component';
+import Layout from '../components/layout.component';
 
-const Index = ({ data }) => {
+const AllPosts = ({ data }) => {
   return (
     <Layout>
       <Helmet
@@ -13,13 +13,13 @@ const Index = ({ data }) => {
         meta={[
           {
             name: 'description',
-            content: data.site.siteMetadata.description,
+            content: 'All the posts are delicious',
           },
         ]}
-        title={data.site.siteMetadata.title}
+        title="ALlPosts"
       />
-      <h1>Home page</h1>
-      <h3>Featured Posts</h3>
+      <h1>All Posts</h1>
+
       {data.allMarkdownRemark.edges.map(({ node: post }) => (
         <PostCard to={post.fields.slug} key={post.id}>
           <h3 className="title">{post.frontmatter.title}</h3>
@@ -28,25 +28,13 @@ const Index = ({ data }) => {
           <p className="date">{post.frontmatter.date}</p>
         </PostCard>
       ))}
-      <Link to="/all-posts/" className="link">
-        See More
-      </Link>
     </Layout>
   );
 };
 
-export const HomePageQuery = graphql`
-  query HomePageQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-    allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
-      limit: 3
-    ) {
+export const allPostsQuery = graphql`
+  query AllPostsQuery {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           excerpt
@@ -65,4 +53,4 @@ export const HomePageQuery = graphql`
   }
 `;
 
-export default Index;
+export default AllPosts;

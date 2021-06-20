@@ -3,10 +3,10 @@ import styled from '@emotion/styled';
 // import { Global, css } from '@emotion/react';
 
 const Layout = ({ children }) => (
-  <>
-    <div className="container">{children}</div>
+  <RootWrapper>
+    <Container>{children}</Container>
     <Footer />
-  </>
+  </RootWrapper>
 );
 
 // const Footer = () => (
@@ -33,6 +33,22 @@ const Layout = ({ children }) => (
 const Footer = ({ light }) => (
   <StyledFooter light={light}>&copy; Copyright 2021 PawanJS</StyledFooter>
 );
+
+const RootWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Container = styled.div`
+  flex: 1;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  max-width: 100rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+`;
 
 const StyledFooter = styled.footer`
   display: flex;

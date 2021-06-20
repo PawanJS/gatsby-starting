@@ -3,6 +3,11 @@ module.exports = {
     DEV_SSR: false,
   },
 
+  siteMetadata: {
+    title: 'Dev-setup',
+    description: 'A blog for developers',
+  },
+
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
