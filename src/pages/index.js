@@ -19,7 +19,7 @@ const Index = ({ data }) => {
         title={data.site.siteMetadata.title}
       />
       <h1>Home page</h1>
-      <h3>Featured Posts</h3>
+      <h2>Featured Posts</h2>
       {data.allMarkdownRemark.edges.map(({ node: post }) => (
         <PostCard to={post.fields.slug} key={post.id}>
           <h3 className="title">{post.frontmatter.title}</h3>
